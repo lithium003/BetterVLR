@@ -5,7 +5,7 @@ console.log('jQuery version:', $?.fn?.jquery || 'jQuery not loaded');
 
 // Constants
 const DEFAULT_IMAGE = "https://i.imgur.com/GKATx36.png";
-const TROPHIES_API_URL = "https://json.link/6zoXT2JZBV.json";
+const TROPHIES_API_URL = "https://json.link/bnPWObJhtr.json";
 
 // Cache for storing fetched trophies data
 let cachedTrophies = null;
@@ -82,25 +82,26 @@ async function initTrophies() {
     let selector, filterFn;
 
     if (url.includes("/team/")) {
-        const teamAndId = url.split("/").slice(-2).join("/");
-        console.log(`[BetterVLR] Detected team page. Team ID: ${teamAndId}`);
+        const teamId = url.split("/")[4];
+        console.log(`[BetterVLR] Detected team page. Team ID: ${teamId}`);
         selector = ".team-header";
         filterFn = trophy => {
-            const trophyId = `${trophy.id}/${trophy.team?.toLowerCase()}`;
-            const isMatch = trophyId === teamAndId;
-            if (isMatch) {
-                console.log(`[BetterVLR] Found matching trophy:`, trophy);
-            }
-            return isMatch;
+            console.log(`[BetterVLR] Checking trophy:`, trophy);
+            return `${trophy.id}` === teamId;
         };
     } 
     else if (url.includes("/player/")) {
-        const playerAndId = url.split("/").slice(-2).join("/");
+        console.log(`[BetterVLR] Detected player page. URL: ${url}`);
+        console.log(`[BetterVLR] URL segments:`, url.split("/"));
+        const playerId = url.split("/")[4];
+        console.log(`[BetterVLR] Detected player page. Player ID: ${playerId}`);
         selector = ".player-header";
-        filterFn = trophy => 
-            trophy.players?.some(player => 
-                `${player.id}/${player.alias?.toLowerCase()}` === playerAndId
+        filterFn = trophy => {
+            console.log(`[BetterVLR] Checking trophy:`, trophy);
+            return trophy.players?.some(player => 
+                `${player.id}` === playerId
             );
+        };
     } 
     else {
         return; // Not a team or player page

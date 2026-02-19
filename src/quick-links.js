@@ -112,6 +112,7 @@ $(".header-nav-item.mod-stats").next().after(`
 <div class="header-nav-item dropdown mod-vlr" style="align-items: center;" tabindex="0">
 	<i class="fa fa-chevron-right" aria-hidden="true"></i>
 	<div class="dropdown-content wf-card">
+		<a class="wf-module-item" href="/vct-2026"><img src="https://i.imgur.com/2dqrmN2.png" alt="VCT 2026">VCT 2026</a>
 		<a class="wf-module-item" href="/vct-2025"><img src="https://i.imgur.com/2dqrmN2.png" alt="VCT 2025">VCT 2025</a>
 		<a class="wf-module-item" href="/vct-2024"><img src="https://i.imgur.com/2dqrmN2.png" alt="VCT 2024">VCT 2024</a>
 		<a class="wf-module-item" href="/vct-2023"><img src="https://i.imgur.com/2dqrmN2.png" alt="VCT 2023">VCT 2023</a>
