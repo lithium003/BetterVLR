@@ -125,8 +125,12 @@ $(document).ready(function () {
         checkbox.on("change", function () {
             // Hide .wf-module-item.event-item elements that include the specified text
             $(".wf-module-item.event-item").each(function () {
-                const event_text = $(this).find(".event-item-name").text();
-                if (event_text.includes(event_name)) {
+                const event_text = $(this).find(".event-item-name").text().trim();
+                if (event_text.includes(event_name)
+                    || (event_name === "VCT" && (event_text.startsWith("Masters") || event_text.startsWith("Champions")))
+                    || (event_name === "VCL" && event_text.includes("Ascension"))
+                    || (event_name === "GC" && event_text.includes("Game Changers"))
+                ) {
                     $(this).css("display", checkbox.is(":checked") ? "flex" : "none");
 
                     // Get the href attribute of the matching event and hide related .wf-module-item.mod-match elements
@@ -137,6 +141,8 @@ $(document).ready(function () {
                     $(`.wf-module-item.mod-match[href*="${href_to_hide}"]`).each(function () {
                         $(this).css("display", checkbox.is(":checked") ? "block" : "none");
                     });
+                    // TODO potentially look directly at the match's href for keywords.
+                    // TODO The current approach seems to only filter matches based on listed events, so if the event isnt listed the matches aren't filtered
                 }
             });
         });
