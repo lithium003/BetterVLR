@@ -1,6 +1,9 @@
 // Function to apply settings based on checkbox values
 function applySettings() {
     var settings = JSON.parse(localStorage.getItem("settings")) || {};
+    var hide_vct = settings.hide_vct;
+    var hide_vcl = settings.hide_vcl;
+    var hide_gc = settings.hide_gc;
     var hide_flags = settings.hide_flags;
     var hide_stars = settings.hide_stars;
     var esports_mode = settings.esports_mode;
@@ -80,6 +83,9 @@ function saveCheckboxValue(checkbox_id) {
 // Function to load checkbox values from localstorage
 function loadCheckboxValues() {
     var settings = JSON.parse(localStorage.getItem("settings")) || {};
+    $("#hide_vct").prop("checked", settings.hide_vct);
+    $("#hide_vcl").prop("checked", settings.hide_vcl);
+    $("#hide_gc").prop("checked", settings.hide_gc);
     $("#hide_flags").prop("checked", settings.hide_flags);
     $("#hide_stars").prop("checked", settings.hide_stars);
     $("#esports_mode").prop("checked", settings.esports_mode);

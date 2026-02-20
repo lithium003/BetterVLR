@@ -36,6 +36,19 @@ $(document).ready(function () {
 const display = `
 <div class="wf-card mod-form mod-dark">
 	<div class="form-section" style="margin-top: 0;">Display</div>
+		<div class="form-label">Events</div>
+		<div style="margin-bottom: 5px;">
+	<input type="checkbox" id="hide_vct">
+		<span style="font-size: 11px; vertical-align: -1px; margin-left: 1px;">Hide VCT by Default</span>
+		</div>
+	<div style="margin-bottom: 5px;">
+		<input type="checkbox" id="hide_vcl">
+		<span style="font-size: 11px; vertical-align: -1px; margin-left: 1px;">Hide VCL by Default</span>
+	</div>
+	<div style="margin-bottom: 5px;">
+		<input type="checkbox" id="hide_gc">
+		<span style="font-size: 11px; vertical-align: -1px; margin-left: 1px;">Hide GC by Default</span>
+	</div>
 	<div class="form-label">Threads</div>
 	<div style="margin-bottom: 5px;">
 		<input type="checkbox" id="hide_flags">
@@ -68,7 +81,7 @@ const discussions = `
 const sidebar = `
 <div class="wf-card mod-form mod-dark">
 	<div class="form-section" style="margin-top: 0;">Sidebar</div>
-	<div class="form-hint">select which sidebar items to hide</div>
+	<div class="form-hint">Select which sidebar items to hide</div>
 	<div class="form-label" style="margin-top: 15px;">Valorant</div>
 	<div style="margin-bottom: 5px;">
 		<input type="checkbox" id="hide_live_streams">

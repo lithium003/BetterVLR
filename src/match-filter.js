@@ -4,6 +4,7 @@ $(".js-home-matches-upcoming").prev().before(`<div id="regions-filter" class="bt
 $(".js-home-events").css("margin-top", "0px");
 $(".js-home-events").prev().before(`<div id="events-filter" class="btn wf-card">EVENTS</div>`);
 
+
 $("#regions-filter").after(`
 <div id="regions-filter-content" class="wf-card">
     <label class="btn">
@@ -24,18 +25,23 @@ $("#regions-filter").after(`
     </label>
 </div>`);
 
+// Determine which events are hidden in settings and set default checbox states accordingly)
+const _settings = JSON.parse(localStorage.getItem("settings")) || {};
+const vctCheckedAttr = (_settings.hide_vct === undefined || !_settings.hide_vct) ? "checked" : "";
+const vclCheckedAttr = (_settings.hide_vcl === undefined || !_settings.hide_vcl) ? "checked" : "";
+const gcCheckedAttr  = (_settings.hide_gc  === undefined || !_settings.hide_gc)  ? "checked" : "";
 $("#events-filter").after(`
 <div id="events-filter-content" class="wf-card">
     <label class="btn">
-        <input id="vct" type="checkbox" checked>
+        <input id="vct" type="checkbox" ${vctCheckedAttr}>
         <span>VCT</span>
     </label>
     <label class="btn">
-        <input id="vcl" type="checkbox" checked>
+        <input id="vcl" type="checkbox" ${vclCheckedAttr}>
         <span>VCL</span>
     </label>
     <label class="btn">
-        <input id="gc" type="checkbox" checked>
+        <input id="gc" type="checkbox" ${gcCheckedAttr}>
         <span>GC</span>
     </label>
 </div>`);
@@ -114,7 +120,6 @@ $(document).ready(function () {
     ]);
 });
 
-
 $(document).ready(function () {
     function filterEvents(checkbox, event_name) {
         checkbox.on("change", function () {
@@ -136,9 +141,10 @@ $(document).ready(function () {
             });
         });
     }
-
     // Call the function for each checkbox with its specified text
     filterEvents($("#vct"), "VCT");
     filterEvents($("#vcl"), "VCL");
     filterEvents($("#gc"), "GC");
+    // Run handlers once on page load to apply initial filters loaded from settings
+    $("#vct, #vcl, #gc").trigger("change");
 });
