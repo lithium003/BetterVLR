@@ -25,6 +25,7 @@
     "twemoji": "^14.0.2"
   },
   "devDependencies": {
+    "@types/jquery": "^3.5.33",
     "copy-webpack-plugin": "^11.0.0",
     "css-loader": "^6.8.1",
     "css-minimizer-webpack-plugin": "^5.0.1",

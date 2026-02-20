@@ -71,27 +71,32 @@ const quick_links = `
 <div id="sortable-container" class="wf-card mod-form mod-dark">
 	<div class="form-section" style="margin-top: 0;">Quick Links</div>
 	<div class="quick-links">
-		<a class="wf-module-item" href="/vct-2025"><img src="https://i.imgur.com/2dqrmN2.png" alt="VCT 2025">VCT 2025</a>
+		<a class="wf-module-item" href="/vct-2026"><img src="https://owcdn.net/img/5f8e73ec18ba4.png" alt="VCT 2026">VCT 2026</a>
 		<div class="wf-module-item" style="cursor: not-allowed;">EDIT<i class="fa fa-pencil" aria-hidden="true"></i></div>
 		<div class="wf-module-item" style="cursor: not-allowed;">REMOVE<i class="fa fa-ban" aria-hidden="true"></i></div>
 	</div>
 	<div class="quick-links">
-		<a class="wf-module-item" href="/vct-2024"><img src="https://i.imgur.com/2dqrmN2.png" alt="VCT 2024">VCT 2024</a>
+		<a class="wf-module-item" href="/vct-2025"><img src="https://owcdn.net/img/5f8e73ec18ba4.png" alt="VCT 2025">VCT 2025</a>
 		<div class="wf-module-item" style="cursor: not-allowed;">EDIT<i class="fa fa-pencil" aria-hidden="true"></i></div>
 		<div class="wf-module-item" style="cursor: not-allowed;">REMOVE<i class="fa fa-ban" aria-hidden="true"></i></div>
 	</div>
 	<div class="quick-links">
-		<a class="wf-module-item" href="/vct-2023"><img src="https://i.imgur.com/2dqrmN2.png" alt="VCT 2023">VCT 2023</a>
+		<a class="wf-module-item" href="/vct-2024"><img src="https://owcdn.net/img/5f8e73ec18ba4.png" alt="VCT 2024">VCT 2024</a>
 		<div class="wf-module-item" style="cursor: not-allowed;">EDIT<i class="fa fa-pencil" aria-hidden="true"></i></div>
 		<div class="wf-module-item" style="cursor: not-allowed;">REMOVE<i class="fa fa-ban" aria-hidden="true"></i></div>
 	</div>
 	<div class="quick-links">
-		<a class="wf-module-item" href="/vct-2022"><img src="https://i.imgur.com/wiQInjN.png" alt="VCT 2022">VCT 2022</a>
+		<a class="wf-module-item" href="/vct-2023"><img src="https://owcdn.net/img/5f8e73ec18ba4.png" alt="VCT 2023">VCT 2023</a>
 		<div class="wf-module-item" style="cursor: not-allowed;">EDIT<i class="fa fa-pencil" aria-hidden="true"></i></div>
 		<div class="wf-module-item" style="cursor: not-allowed;">REMOVE<i class="fa fa-ban" aria-hidden="true"></i></div>
 	</div>
 	<div class="quick-links">
-		<a class="wf-module-item" href="/vct-2021"><img src="https://i.imgur.com/bgkt9iS.png" alt="VCT 2021">VCT 2021</a>
+		<a class="wf-module-item" href="/vct-2022"><img src="https://owcdn.net/img/5f8e73ec18ba4.png" alt="VCT 2022">VCT 2022</a>
+		<div class="wf-module-item" style="cursor: not-allowed;">EDIT<i class="fa fa-pencil" aria-hidden="true"></i></div>
+		<div class="wf-module-item" style="cursor: not-allowed;">REMOVE<i class="fa fa-ban" aria-hidden="true"></i></div>
+	</div>
+	<div class="quick-links">
+		<a class="wf-module-item" href="/vct-2021"><img src="https://owcdn.net/img/5f8e73ec18ba4.png" alt="VCT 2021">VCT 2021</a>
 		<div class="wf-module-item" style="cursor: not-allowed;">EDIT<i class="fa fa-pencil" aria-hidden="true"></i></div>
 		<div class="wf-module-item" style="cursor: not-allowed;">REMOVE<i class="fa fa-ban" aria-hidden="true"></i></div>
 	</div>
@@ -112,12 +117,12 @@ $(".header-nav-item.mod-stats").next().after(`
 <div class="header-nav-item dropdown mod-vlr" style="align-items: center;" tabindex="0">
 	<i class="fa fa-chevron-right" aria-hidden="true"></i>
 	<div class="dropdown-content wf-card">
-		<a class="wf-module-item" href="/vct-2026"><img src="https://i.imgur.com/2dqrmN2.png" alt="VCT 2026">VCT 2026</a>
-		<a class="wf-module-item" href="/vct-2025"><img src="https://i.imgur.com/2dqrmN2.png" alt="VCT 2025">VCT 2025</a>
-		<a class="wf-module-item" href="/vct-2024"><img src="https://i.imgur.com/2dqrmN2.png" alt="VCT 2024">VCT 2024</a>
-		<a class="wf-module-item" href="/vct-2023"><img src="https://i.imgur.com/2dqrmN2.png" alt="VCT 2023">VCT 2023</a>
-		<a class="wf-module-item" href="/vct-2022"><img src="https://i.imgur.com/wiQInjN.png" alt="VCT 2022">VCT 2022</a>
-		<a class="wf-module-item" href="/vct-2021"><img src="https://i.imgur.com/bgkt9iS.png" alt="VCT 2021">VCT 2021</a>
+		<a class="wf-module-item" href="/vct-2026"><img src="https://owcdn.net/img/5f8e73ec18ba4.png" alt="VCT 2026">VCT 2026</a>
+		<a class="wf-module-item" href="/vct-2025"><img src="https://owcdn.net/img/5f8e73ec18ba4.png" alt="VCT 2025">VCT 2025</a>
+		<a class="wf-module-item" href="/vct-2024"><img src="https://owcdn.net/img/5f8e73ec18ba4.png" alt="VCT 2024">VCT 2024</a>
+		<a class="wf-module-item" href="/vct-2023"><img src="https://owcdn.net/img/5f8e73ec18ba4.png" alt="VCT 2023">VCT 2023</a>
+		<a class="wf-module-item" href="/vct-2022"><img src="https://owcdn.net/img/5f8e73ec18ba4.png" alt="VCT 2022">VCT 2022</a>
+		<a class="wf-module-item" href="/vct-2021"><img src="https://owcdn.net/img/5f8e73ec18ba4.png" alt="VCT 2021">VCT 2021</a>
 		<a class="wf-module-item" href="/transfers"><img src="https://i.imgur.com/O6aeTiv.png" alt="Transfers">Transfers</a>
 	</div>
 </div>
